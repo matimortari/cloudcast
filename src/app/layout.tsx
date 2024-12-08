@@ -9,7 +9,7 @@ import Providers from "../components/context/Providers"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-	title: "CloudCast",
+	title: "CloudCast 🌤️",
 	description: "Weather App!"
 }
 
