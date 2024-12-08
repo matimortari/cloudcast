@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react"
 import { useTheme } from "next-themes"
+import SearchDialog from "./SearchDialog"
 import { Button } from "./ui/button"
 
 export default function Navbar() {
@@ -16,6 +17,7 @@ export default function Navbar() {
 			<div className="flex items-center gap-6"></div>
 
 			<div className="flex items-center gap-2">
+				<SearchDialog />
 				<Button onClick={handleThemeToggle} className="button flex h-10 w-10 items-center justify-center">
 					<Icon
 						icon={theme === "light" ? "material-symbols:light-mode-rounded" : "material-symbols:dark-mode-rounded"}
