@@ -6,15 +6,15 @@ export async function GET(req: NextRequest) {
 		const lat = searchParams.get("lat")
 		const lon = searchParams.get("lon")
 
-		const response = await fetch(
+		const res = await fetch(
 			`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum`
 		)
 
-		if (!response.ok) {
+		if (!res.ok) {
 			throw new Error("Network response was not ok")
 		}
 
-		const data = await response.json()
+		const data = await res.json()
 
 		return NextResponse.json(data)
 	} catch (error) {
