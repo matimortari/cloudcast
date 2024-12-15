@@ -1,8 +1,9 @@
 # CloudCast 🌤️
 
-A simple weather app, built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+A simple weather website, built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui. The project is based on a tutorial
+from [FreeCodeCamp](https://www.youtube.com/watch?v=Reny0cTTv24), with some modifications and improvements made by me.
 
-[🔍 **Check it out!**](https://cloudcast-live.vercel.app)
+[**Check it out!** 🔍](https://cloudcast-live.vercel.app)
 
 ## 📦 Key Features
 
@@ -16,7 +17,7 @@ A simple weather app, built with Next.js, TypeScript, Tailwind CSS, and shadcn/u
 ## 🛠️ Stack
 
 - **Next.js** for server-side rendering.
-- **OpenWeatherMap** API for weather data.
+- **Open Meteo** API for weather data.
 - **shadcn/ui** integration for UI components.
 - **TypeScript**.
 - **Tailwind CSS**.
