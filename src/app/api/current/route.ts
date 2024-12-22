@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
+// GET method for getting current forest data
 export async function GET(req: NextRequest) {
 	try {
 		const searchParams = req.nextUrl.searchParams

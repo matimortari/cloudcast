@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
+// GET method for getting weekly forecast data
 export async function GET(req: NextRequest) {
 	try {
 		const searchParams = req.nextUrl.searchParams
