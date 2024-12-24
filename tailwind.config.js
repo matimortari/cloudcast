@@ -22,16 +22,17 @@ const config = {
 					DEFAULT: "var(--accent)",
 					foreground: "var(--accent-foreground)"
 				},
-				muted: {
-					DEFAULT: "var(--muted)",
-					foreground: "var(--muted-foreground)"
-				},
 				destructive: {
 					DEFAULT: "var(--destructive)",
 					foreground: "var(--destructive-foreground)"
 				},
-				google: "#DB4437", // Google Login
-				github: "#333333" // GitHub Login
+				muted: {
+					DEFAULT: "var(--muted)",
+					foreground: "var(--muted-foreground)"
+				},
+				border: "var(--border)",
+				input: "var(--input)",
+				ring: "var(--ring)"
 			}
 		}
 	}
