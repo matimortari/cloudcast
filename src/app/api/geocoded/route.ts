@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
 
 		return NextResponse.json(await res.json())
 	} catch (error) {
-		console.log("Error fetching geocoded data")
+		console.error("Error fetching geocoded data:", error)
 		return new Response("Error fetching geocoded data", { status: 500 })
 	}
 }
