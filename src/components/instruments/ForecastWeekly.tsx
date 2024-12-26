@@ -7,7 +7,7 @@ export default function ForecastWeekly() {
 	const { weeklyForecast } = useGlobalContext()
 
 	if (!weeklyForecast?.daily) {
-		return <Skeleton className="h-full w-full" />
+		return <Skeleton className="size-full" />
 	}
 
 	const { time, temperature_2m_max, temperature_2m_min, precipitation_sum } = weeklyForecast.daily

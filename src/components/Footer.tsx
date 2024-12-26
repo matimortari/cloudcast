@@ -6,7 +6,7 @@ export default function Footer() {
 		<footer className="flex items-center justify-between p-4 pt-12 text-muted-foreground">
 			<div className="order-3 flex items-center">
 				<Link href="https://github.com/matimortari" target="_blank" rel="noopener noreferrer">
-					<Icon icon="simple-icons:github" className="icon h-6 w-6" />
+					<Icon icon="simple-icons:github" className="icon size-6" />
 				</Link>
 				<Link
 					href="https://www.linkedin.com/in/matheus-mortari-19rt"
@@ -14,7 +14,7 @@ export default function Footer() {
 					rel="noopener noreferrer"
 					className="ml-2 md:ml-4"
 				>
-					<Icon icon="simple-icons:linkedin" className="icon h-6 w-6" />
+					<Icon icon="simple-icons:linkedin" className="icon size-6" />
 				</Link>
 			</div>
 

@@ -37,7 +37,7 @@ export default function Mapbox() {
 	const [mapLoaded, setMapLoaded] = useState(false)
 
 	if (!forecast || !forecast.latitude || !forecast.longitude) {
-		return <Skeleton className="h-full w-full" />
+		return <Skeleton className="size-full" />
 	}
 
 	const activeCityCoords = { latitude: forecast.latitude, longitude: forecast.longitude }
@@ -47,8 +47,8 @@ export default function Mapbox() {
 	}
 
 	return (
-		<section className="relative flex-1 basis-[50%]">
-			{!mapLoaded && <Skeleton className="absolute left-0 top-0 h-full w-full" />}{" "}
+		<section className="relative flex-1 basis-1/2">
+			{!mapLoaded && <Skeleton className="absolute left-0 top-0 size-full" />}{" "}
 			<MapContainer
 				zoom={10}
 				center={[activeCityCoords.latitude, activeCityCoords.longitude]}

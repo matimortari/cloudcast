@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
 
 		return NextResponse.json(data)
 	} catch (error) {
-		console.log("Error fetching weekly forecast data:", error)
+		console.error("Error fetching weekly forecast data:", error)
 		return new NextResponse("Error fetching weekly forecast data", { status: 500 })
 	}
 }
