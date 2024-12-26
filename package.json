@@ -10,7 +10,7 @@
 		"test": "vitest",
 		"test:e2e": "playwright test",
 		"coverage": "vitest run --coverage",
-		"lint": "next lint"
+		"lint": "eslint ."
 	},
 	"dependencies": {
 		"@iconify/react": "5.0.1",
@@ -38,33 +38,31 @@
 		"tailwindcss-animate": "1.0.7"
 	},
 	"devDependencies": {
+		"@eslint/compat": "1.2.4",
+		"@eslint/js": "9.17.0",
 		"@playwright/test": "1.45.2",
 		"@tanstack/react-query-devtools": "5.51.5",
 		"@testing-library/jest-dom": "6.5.0",
 		"@testing-library/react": "16.0.1",
 		"@types/jest": "29.5.13",
-		"@types/leaflet": "1.9.12",
+		"@types/leaflet": "1.9.15",
 		"@types/node": "20.14.11",
 		"@types/react": "18.3.3",
 		"@types/react-dom": "18.3.0",
 		"@types/react-leaflet": "3.0.0",
 		"@types/supertest": "6.0.2",
-		"@typescript-eslint/eslint-plugin": "7.14.1",
-		"@typescript-eslint/parser": "7.14.1",
 		"@vitejs/plugin-react": "4.3.2",
 		"@vitest/coverage-v8": "2.1.2",
 		"dotenv-cli": "7.4.2",
-		"eslint": "8.56.0",
-		"eslint-config-next": "14.2.5",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-prettier": "5.2.1",
-		"eslint-plugin-react": "7.34.4",
+		"eslint": "9.17.0",
+		"eslint-plugin-react": "7.37.3",
+		"eslint-plugin-tailwindcss": "3.17.5",
+		"globals": "15.14.0",
 		"postcss": "8.4.39",
-		"prettier": "3.3.3",
-		"prettier-plugin-tailwindcss": "0.6.5",
 		"supertest": "7.0.0",
 		"tailwindcss": "3.4.6",
 		"typescript": "5.5.3",
+		"typescript-eslint": "8.18.2",
 		"vitest": "2.1.2"
 	}
 }

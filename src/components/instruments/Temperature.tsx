@@ -24,7 +24,7 @@ export default function Temperature() {
 	}, [forecast?.timezone])
 
 	if (!forecast?.current || !forecast?.daily) {
-		return <Skeleton className="h-full w-full" />
+		return <Skeleton className="size-full" />
 	}
 
 	const { current, daily } = forecast

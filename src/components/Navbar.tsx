@@ -18,7 +18,7 @@ export default function Navbar() {
 
 			<div className="flex items-center gap-2">
 				<SearchDialog />
-				<Button onClick={handleThemeToggle} className="btn flex h-10 w-10 items-center justify-center">
+				<Button onClick={handleThemeToggle} className="btn flex size-10 items-center justify-center">
 					<Icon
 						icon={theme === "light" ? "material-symbols:light-mode-rounded" : "material-symbols:dark-mode-rounded"}
 					/>
