@@ -48,7 +48,7 @@ export default function Mapbox() {
 
 	return (
 		<section className="relative flex-1 basis-1/2">
-			{!mapLoaded && <Skeleton className="absolute left-0 top-0 size-full" />}{" "}
+			{!mapLoaded && <Skeleton className="absolute left-0 top-0 size-full" />}
 			<MapContainer
 				zoom={10}
 				center={[activeCityCoords.latitude, activeCityCoords.longitude]}
