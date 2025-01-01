@@ -12,11 +12,11 @@ export default function ForecastWeekly() {
 
 	const { time, temperature_2m_max, temperature_2m_min, precipitation_sum } = weeklyForecast.daily
 
-	const dailyForecast = time.map((day, i) => ({
+	const dailyForecast = time.map((day: number, index: number) => ({
 		day: new Date(day).toLocaleDateString("en-US", { weekday: "short" }),
-		minTemp: Math.round(temperature_2m_min[i]),
-		maxTemp: Math.round(temperature_2m_max[i]),
-		precipitation: precipitation_sum[i]
+		minTemp: Math.round(temperature_2m_min[index]),
+		maxTemp: Math.round(temperature_2m_max[index]),
+		precipitation: precipitation_sum[index]
 	}))
 
 	const maxTemp = Math.max(...temperature_2m_max)
@@ -29,8 +29,8 @@ export default function ForecastWeekly() {
 				<CalendarDays size={25} className="icon" /> Weekly Forecast
 			</h2>
 
-			{dailyForecast.map((day, i) => (
-				<div key={i} className="flex flex-col justify-evenly border-b-2 p-2">
+			{dailyForecast.map((day: any, index: number) => (
+				<div key={index} className="flex flex-col justify-evenly border-b-2 p-2">
 					<p className="text-lg font-bold">{day.day}</p>
 					<p className="flex justify-between text-xs">
 						<span>(low)</span>

@@ -35,7 +35,7 @@ export default function SearchDialog() {
 					<div className="mt-2 flex flex-grow flex-col overflow-y-auto">
 						<ul>
 							{geoCodedList?.length === 0 && <p className="p-2 text-base text-muted-foreground">No Results</p>}
-							{geoCodedList?.map((item, index) => {
+							{geoCodedList?.map((item: any, index: number) => {
 								const { country, admin1, name, latitude, longitude } = item
 								return (
 									<li
