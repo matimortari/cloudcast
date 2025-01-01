@@ -1,6 +1,6 @@
 "use client"
 
-import { defaultLocations } from "@/src/lib/defaultLocations"
+import { defaultLocations } from "@/src/lib/utils"
 import { debounce } from "lodash"
 import { createContext, useContext, useEffect, useState } from "react"
 

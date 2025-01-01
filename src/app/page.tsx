@@ -13,7 +13,7 @@ import Temperature from "@/src/components/instruments/Temperature"
 import UvIndex from "@/src/components/instruments/UvIndex"
 import Visibility from "@/src/components/instruments/Visibility"
 import Wind from "@/src/components/instruments/Wind"
-import { defaultLocations } from "@/src/lib/defaultLocations"
+import { defaultLocations } from "@/src/lib/utils"
 
 export default function Home() {
 	const { setActiveCityCoords, updateCityName } = useGlobalContextUpdate()

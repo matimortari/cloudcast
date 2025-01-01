@@ -8,10 +8,10 @@ import { Skeleton } from "../ui/skeleton"
 
 export default function Temperature() {
 	const { forecast, activeCityName } = useGlobalContext()
-
 	const [localTime, setLocalTime] = useState<string>("")
 	const [currentDate, setCurrentDate] = useState<string>("")
 
+	// Update local time every second based on the forecast timezone
 	useEffect(() => {
 		if (forecast?.timezone) {
 			const interval = setInterval(() => {
