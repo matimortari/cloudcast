@@ -25,9 +25,9 @@ export default function ForecastWeekly() {
 
 	return (
 		<section className="flex flex-1 flex-col justify-between p-4">
-			<h2 className="flex items-center gap-2 py-2 font-medium">
+			<h4 className="flex items-center gap-2 py-2 font-medium">
 				<CalendarDays size={25} className="icon" /> Weekly Forecast
-			</h2>
+			</h4>
 
 			{dailyForecast.map((day: any, index: number) => (
 				<div key={index} className="flex flex-col justify-evenly border-b-2 p-2">

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base layer for custom theme variables */
 @layer base {
 	:root {
 		--background: #0f0f0f;
@@ -22,12 +23,8 @@
 		--muted: #333333;
 		--muted-foreground: #757575;
 
-		--destructive: #9f1919;
-		--destructive-foreground: #e9e9e9;
-
 		--chart-1: #94bed1;
 		--chart-2: #61abb4;
-		--chart-2: #6cb3aa;
 		--chart-3: #a78846;
 		--chart-4: #9e3f3b;
 		--chart-5: #b32a2a;
@@ -52,16 +49,21 @@
 		--muted: #afafaf;
 		--muted-foreground: #757575;
 
-		--destructive: #d83a3a;
-		--destructive-foreground: #e9e9e9;
+		--chart-1: #94bed1;
+		--chart-2: #61abb4;
+		--chart-3: #a78846;
+		--chart-4: #9e3f3b;
+		--chart-5: #b32a2a;
 	}
 }
 
+/* General body styling */
 body {
 	background-color: var(--background);
 	color: var(--foreground);
 }
 
+/* Section styling */
 section {
 	background-color: var(--card);
 	color: var(--card-foreground);
@@ -69,6 +71,44 @@ section {
 	animation: flash 1s ease-out;
 }
 
+/* Header element font sizes and line heights */
+h1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 600;
+}
+
+/* Button class styles */
 .btn {
 	color: var(--foreground);
 	background: var(--card);
@@ -85,6 +125,7 @@ section {
 	opacity: 0.9;
 }
 
+/* Icon class styles */
 .icon {
 	transition: transform 0.3s ease-in-out;
 }
@@ -93,11 +134,13 @@ section {
 	transform: scale(1.2);
 }
 
+/* Progress bar styling */
 .progress {
-	background: linear-gradient(to right, #94bed1, #61abb4, #6cb3aa, #a78846, #9e3f3b, #b32a2a);
+	background: linear-gradient(to right, #94bed1, #61abb4, #a78846, #9e3f3b, #b32a2a);
 	border-radius: 0.5rem;
 }
 
+/* Hide scrollbar */
 .scrollbar-hidden {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
