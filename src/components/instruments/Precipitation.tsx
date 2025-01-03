@@ -16,9 +16,9 @@ export default function Precipitation() {
 
 	return (
 		<section className="flex h-48 flex-col p-4">
-			<h2 className="flex items-center gap-2 text-lg font-medium">
+			<h4 className="flex items-center gap-2 text-lg font-medium">
 				<CloudRain size={25} className="icon" /> Precipitation
-			</h2>
+			</h4>
 
 			<div className="my-4 flex flex-col gap-2">
 				<p className="text-xl font-medium">{precipitation} mm</p>

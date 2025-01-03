@@ -21,14 +21,14 @@ export default function ForecastDaily() {
 
 	return (
 		<section className="col-span-full flex h-48 flex-col gap-4 p-4 md:col-span-3">
-			<h2 className="flex items-center gap-2 font-medium">
+			<h4 className="flex items-center gap-2 font-medium">
 				<ClockIcon size={25} className="icon" /> Daily Forecast
-			</h2>
+			</h4>
 
 			<Carousel className="relative w-full overflow-x-auto">
 				<CarouselContent className="flex flex-row gap-2">
 					{time.length === 0 ? (
-						<h1 className="font-semibold">No data available</h1>
+						<h2 className="font-semibold text-muted-foreground">No data available</h2>
 					) : (
 						time.map((timePoint: number, index: number) => (
 							<CarouselItem key={index} className="flex basis-32 flex-col items-center justify-center gap-2">

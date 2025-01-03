@@ -24,9 +24,9 @@ export default function AirQuality() {
 	return (
 		<section className="col-span-2 flex h-auto w-full flex-col p-4 md:h-48 md:flex-row md:gap-10">
 			<div className="flex flex-1 flex-col">
-				<h2 className="flex items-center gap-2 font-medium">
+				<h4 className="flex items-center gap-2 font-medium">
 					<Gauge size={25} className="icon" /> Air Quality
-				</h2>
+				</h4>
 
 				<div className="my-4 flex flex-col gap-2">
 					<p className="text-sm">Air Quality Index: {usAqi}</p>
