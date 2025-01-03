@@ -18,9 +18,9 @@ export default function Sunset() {
 
 	return (
 		<section className="flex h-48 flex-col p-4">
-			<h2 className="flex items-center gap-2 font-medium">
+			<h4 className="flex items-center gap-2 font-medium">
 				<SunsetIcon size={25} className="icon" /> Sunset
-			</h2>
+			</h4>
 
 			<div className="mt-4 flex flex-col gap-1">
 				<p className="text-sm font-medium">Sunset at:</p>
