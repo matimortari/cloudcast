@@ -7,9 +7,10 @@ export default function Visibility() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.hourly) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="size-full" />
 	}
-	const { visibility } = forecast.hourly
+
+	const { visibility = [] } = forecast.hourly
 
 	const visibilityInKm = Math.round(visibility[0] / 1000)
 	const visibilityDescription = visibilityRating(visibilityInKm)

@@ -8,10 +8,10 @@ export default function UvIndex() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.daily) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="size-full" />
 	}
 
-	const { uv_index_max } = forecast.daily
+	const { uv_index_max = [] } = forecast.daily
 
 	const uvIndex = Math.ceil(uv_index_max[0])
 

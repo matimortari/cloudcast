@@ -7,13 +7,14 @@ export default function FeelsLike() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.current) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="size-full" />
 	}
 
 	const { apparent_temperature, temperature_2m } = forecast.current
 
 	const feelsLike = Math.round(apparent_temperature)
 	const currentTemp = Math.round(temperature_2m)
+
 	const feelsLikeDescription = feelsLikeRating(feelsLike, currentTemp)
 
 	return (
