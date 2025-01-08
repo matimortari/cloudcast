@@ -7,13 +7,14 @@ export default function Humidity() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.current) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="size-full" />
 	}
 
 	const { relative_humidity_2m, surface_pressure, dew_point_2m } = forecast.current
 
 	const pressure = Math.round(surface_pressure)
 	const dewPoint = Math.round(dew_point_2m)
+
 	const humidityDescription = humidityRating(relative_humidity_2m)
 
 	return (

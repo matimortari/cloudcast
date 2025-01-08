@@ -7,7 +7,7 @@ export default function Precipitation() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.current) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="h-full" />
 	}
 
 	const { precipitation, rain, snowfall } = forecast.current

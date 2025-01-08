@@ -27,12 +27,14 @@ export default function Temperature() {
 		return <Skeleton className="size-full" />
 	}
 
-	const { current, daily } = forecast
+	const { temperature_2m, weather_code } = forecast.current
+	const { temperature_2m_min = [], temperature_2m_max = [] } = forecast.daily
 
-	const temp = Math.round(current.temperature_2m)
-	const minTemp = Math.round(daily.temperature_2m_min[0])
-	const maxTemp = Math.round(daily.temperature_2m_max[0])
-	const weatherCode = current.weather_code || 0
+	const temp = Math.round(temperature_2m)
+	const minTemp = Math.round(temperature_2m_min[0])
+	const maxTemp = Math.round(temperature_2m_max[0])
+
+	const weatherCode = weather_code
 	const WeatherIcon = getIcon(weatherCode)
 	const weatherDescription = getDescription(weatherCode)
 

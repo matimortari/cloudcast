@@ -10,7 +10,6 @@ export async function GET(req: NextRequest) {
 		const res = await fetch(
 			`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum`
 		)
-
 		if (!res.ok) {
 			throw new Error("Network response was not ok")
 		}

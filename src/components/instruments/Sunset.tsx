@@ -7,14 +7,14 @@ export default function Sunset() {
 	const { forecast } = useGlobalContext()
 
 	if (!forecast?.daily || !forecast?.timezone) {
-		return <Skeleton className="h-48" />
+		return <Skeleton className="h-full" />
 	}
 
-	const { sunrise, sunset } = forecast.daily
 	const { timezone } = forecast
+	const { sunrise = [], sunset = [] } = forecast.daily
 
-	const sunsetTime = sunset?.[0] ? moment(sunset[0]).tz(timezone).format("HH:mm") : "N/A"
-	const sunriseTime = sunrise?.[0] ? moment(sunrise[0]).tz(timezone).format("HH:mm") : "N/A"
+	const sunsetTime = moment(sunset[0]).tz(timezone).format("HH:mm")
+	const sunriseTime = moment(sunrise[0]).tz(timezone).format("HH:mm")
 
 	return (
 		<section className="flex h-48 flex-col p-4">

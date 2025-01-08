@@ -10,7 +10,7 @@ export default function ForecastWeekly() {
 		return <Skeleton className="size-full" />
 	}
 
-	const { time, temperature_2m_max, temperature_2m_min, precipitation_sum } = weeklyForecast.daily
+	const { time = [], temperature_2m_max = [], temperature_2m_min = [], precipitation_sum = [] } = weeklyForecast.daily
 
 	const dailyForecast = time.map((day: number, index: number) => ({
 		day: new Date(day).toLocaleDateString("en-US", { weekday: "short" }),
@@ -21,6 +21,7 @@ export default function ForecastWeekly() {
 
 	const maxTemp = Math.max(...temperature_2m_max)
 	const minTemp = Math.min(...temperature_2m_min)
+
 	const tempRange = maxTemp - minTemp
 
 	return (

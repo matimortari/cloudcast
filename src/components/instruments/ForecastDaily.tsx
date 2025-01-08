@@ -9,15 +9,14 @@ import { Skeleton } from "../ui/skeleton"
 export default function ForecastDaily() {
 	const { forecast } = useGlobalContext()
 
-	if (!forecast?.hourly) {
-		return <Skeleton className="w-full" />
+	if (!forecast?.hourly || !forecast?.current) {
+		return <Skeleton className="size-full" />
 	}
 
-	const hourly = forecast?.hourly || {}
-	const { time = [], temperature_2m = [], precipitation = [] } = hourly
+	const { weather_code } = forecast.current
+	const { time = [], temperature_2m = [], precipitation = [] } = forecast.hourly
 
-	const weatherCode = forecast?.current?.weather_code
-	const WeatherIcon = getIcon(weatherCode)
+	const WeatherIcon = getIcon(weather_code)
 
 	return (
 		<section className="col-span-full flex h-48 flex-col gap-4 p-4 md:col-span-3">
