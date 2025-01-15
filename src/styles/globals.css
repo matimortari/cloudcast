@@ -57,10 +57,21 @@
 	}
 }
 
+/* Override universal styles */
+* {
+	box-sizing: border-box;
+	border-color: var(--border);
+	text-decoration: none;
+}
+
 /* General body styling */
 body {
 	background-color: var(--background);
 	color: var(--foreground);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
 }
 
 /* Section styling */
@@ -110,19 +121,39 @@ h6 {
 
 /* Button class styles */
 .btn {
-	color: var(--foreground);
-	background: var(--card);
-	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	padding: 0.5rem;
-	font-weight: 700;
-	height: 2.5rem;
-	width: 2.5rem;
+	gap: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-align: center;
+	background-color: var(--card);
+	color: var(--foreground);
+	border: 1px solid var(--border);
+	border-radius: 0.5rem;
+	transition: all 0.2s ease-in-out;
+	user-select: none;
+	white-space: nowrap;
 }
 
 .btn:hover {
 	background: var(--muted);
 	transform: scale(1.05);
 	opacity: 0.9;
+}
+
+.btn:active {
+	opacity: 1;
+	transform: scale(0.98);
+}
+
+.btn:disabled,
+.btn[disabled] {
+	cursor: not-allowed;
+	opacity: 0.65;
 }
 
 /* Icon class styles */
