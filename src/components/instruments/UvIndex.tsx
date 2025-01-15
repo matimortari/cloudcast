@@ -18,7 +18,7 @@ export default function UvIndex() {
 	const { rating, description } = uvIndexRating(uvIndex)
 
 	return (
-		<section className="col-span-full flex h-48 flex-col p-4 md:col-span-1">
+		<div className="card col-span-full flex h-48 flex-col p-4 md:col-span-1">
 			<h4 className="flex items-center gap-2 font-medium">
 				<SunDim size={25} className="icon" /> UV Index
 			</h4>
@@ -30,6 +30,6 @@ export default function UvIndex() {
 				<Progress className="progress" value={Math.min(uvIndex, 10) * 10} max={100} />
 				<p className="text-sm">{description}</p>
 			</div>
-		</section>
+		</div>
 	)
 }

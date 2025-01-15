@@ -47,7 +47,7 @@ export default function Mapbox() {
 	}
 
 	return (
-		<section className="relative flex-1 basis-1/2">
+		<div className="card relative flex-1 basis-1/2">
 			{!mapLoaded && <Skeleton className="absolute left-0 top-0 size-full" />}
 			<MapContainer
 				zoom={10}
@@ -61,6 +61,6 @@ export default function Mapbox() {
 				/>
 				<FlyToActiveCity activeCityCoords={activeCityCoords} />
 			</MapContainer>
-		</section>
+		</div>
 	)
 }

@@ -18,7 +18,7 @@ export default function FeelsLike() {
 	const feelsLikeDescription = feelsLikeRating(feelsLike, currentTemp)
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 font-medium">
 				<Thermometer size={25} className="icon" /> Feels Like
 			</h4>
@@ -27,6 +27,6 @@ export default function FeelsLike() {
 				<p className="text-2xl font-medium">{feelsLike}°</p>
 				<p className="w-36 text-sm">{feelsLikeDescription}</p>
 			</div>
-		</section>
+		</div>
 	)
 }

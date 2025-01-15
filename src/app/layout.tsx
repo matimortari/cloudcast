@@ -13,13 +13,6 @@ export const metadata: Metadata = {
 	title: "CloudCast 🌤️",
 	description: "Weather App!",
 	keywords: ["CloudCast", "Weather", "Weather App", "CloudCast Page"],
-	openGraph: {
-		url: "https://cloudcast-live.vercel.app/",
-		images: "/cover.png",
-		title: "CloudCast 🌤️",
-		description: "Weather App!",
-		type: "website"
-	},
 	other: {
 		"google-site-verification": "2j0bcfhh8FCYPpzFylzbiPjl3Pa0X7lMuG060ctsCsA"
 	}

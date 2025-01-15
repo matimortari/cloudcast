@@ -39,10 +39,10 @@ export default function Temperature() {
 	const weatherDescription = getDescription(weatherCode)
 
 	return (
-		<section className="flex flex-col justify-between p-4">
+		<div className="card flex flex-col justify-between p-4">
 			<p className="flex items-center justify-between">
-				<span className="font-medium">{currentDate}</span>
-				<span className="font-medium">{localTime}</span>
+				<span className="text-sm font-medium">{currentDate}</span>
+				<span className="text-sm font-medium">{localTime}</span>
 			</p>
 
 			<p className="flex gap-2 font-bold">
@@ -57,6 +57,6 @@ export default function Temperature() {
 				<span>Low: {minTemp}°</span>
 				<span>High: {maxTemp}°</span>
 			</p>
-		</section>
+		</div>
 	)
 }

@@ -16,7 +16,7 @@ export default function Visibility() {
 	const visibilityDescription = visibilityRating(visibilityInKm)
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 font-medium">
 				<Eye size={25} className="icon" /> Visibility
 			</h4>
@@ -27,6 +27,6 @@ export default function Visibility() {
 				</p>
 				<p className="w-36 text-sm">{visibilityDescription}</p>
 			</div>
-		</section>
+		</div>
 	)
 }

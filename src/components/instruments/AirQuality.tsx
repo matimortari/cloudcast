@@ -16,7 +16,7 @@ export default function AirQuality() {
 	const airQualityDescription = airQualityRating(us_aqi)
 
 	return (
-		<section className="col-span-2 flex h-auto w-full flex-col p-4 md:h-48 md:flex-row md:gap-10">
+		<div className="card col-span-2 flex h-auto w-full flex-col p-4 md:h-48 md:flex-row md:gap-10">
 			<div className="flex flex-1 flex-col">
 				<h4 className="flex items-center gap-2 font-medium">
 					<Gauge size={25} className="icon" /> Air Quality
@@ -54,6 +54,6 @@ export default function AirQuality() {
 					</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	)
 }
