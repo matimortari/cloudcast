@@ -15,7 +15,7 @@ export default function Precipitation() {
 	const precipitationDescription = precipitationRating(precipitation)
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 text-lg font-medium">
 				<CloudRain size={25} className="icon" /> Precipitation
 			</h4>
@@ -36,6 +36,6 @@ export default function Precipitation() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	)
 }

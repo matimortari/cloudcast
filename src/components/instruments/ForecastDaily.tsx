@@ -19,7 +19,7 @@ export default function ForecastDaily() {
 	const WeatherIcon = getIcon(weather_code)
 
 	return (
-		<section className="col-span-full flex h-48 flex-col gap-4 p-4 md:col-span-3">
+		<div className="card col-span-full flex h-48 flex-col gap-4 p-4 md:col-span-3">
 			<h4 className="flex items-center gap-2 font-medium">
 				<ClockIcon size={25} className="icon" /> Daily Forecast
 			</h4>
@@ -45,6 +45,6 @@ export default function ForecastDaily() {
 				<CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-y-1/2 bg-card" variant={"ghost"} />
 				<CarouselNext className="absolute right-0 top-1/2 z-10 -translate-y-1/2 bg-card" variant={"ghost"} />
 			</Carousel>
-		</section>
+		</div>
 	)
 }

@@ -18,7 +18,7 @@ export default function Humidity() {
 	const humidityDescription = humidityRating(relative_humidity_2m)
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 text-lg font-medium">
 				<Droplets size={25} className="icon" /> Humidity
 			</h4>
@@ -38,6 +38,6 @@ export default function Humidity() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	)
 }

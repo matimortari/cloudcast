@@ -25,7 +25,7 @@ export default function ForecastWeekly() {
 	const tempRange = maxTemp - minTemp
 
 	return (
-		<section className="flex flex-1 flex-col justify-between p-4">
+		<div className="card flex flex-1 flex-col justify-between p-4">
 			<h4 className="flex items-center gap-2 py-2 font-medium">
 				<CalendarDays size={25} className="icon" /> Weekly Forecast
 			</h4>
@@ -54,6 +54,6 @@ export default function ForecastWeekly() {
 					</div>
 				</div>
 			))}
-		</section>
+		</div>
 	)
 }

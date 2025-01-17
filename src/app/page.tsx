@@ -24,9 +24,9 @@ export default function Home() {
 	}
 
 	return (
-		<div className="mx-4 lg:mx-8 xl:mx-24">
-			<div className="flex flex-col gap-2 pb-4 md:flex-row">
-				<div className="flex w-full min-w-72 flex-col gap-2 md:w-96">
+		<div className="mx-6 md:mx-20">
+			<main className="flex flex-col gap-2 pb-4 md:flex-row">
+				<div className="flex w-full min-w-72 flex-col gap-2 md:w-fit">
 					<Temperature />
 					<ForecastWeekly />
 				</div>
@@ -44,26 +44,26 @@ export default function Home() {
 						<AirQuality />
 					</div>
 
-					<div className="my-2 flex h-full gap-2">
+					<div className="my-2 flex w-full gap-2">
 						<Mapbox />
 						<div className="flex flex-col gap-2">
 							{defaultLocations.map((location, index) => {
 								return (
-									<section
+									<div
 										key={index}
 										onClick={() => {
 											getClickedCityCoords(location.latitude, location.longitude, location.name)
 										}}
-										className="flex cursor-pointer flex-col gap-2"
+										className="card flex cursor-pointer flex-col gap-2"
 									>
-										<p className="px-2 py-4 text-center text-sm font-semibold">{location.name}</p>
-									</section>
+										<p className="p-4 text-center text-sm font-semibold hover:underline">{location.name}</p>
+									</div>
 								)
 							})}
 						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 		</div>
 	)
 }

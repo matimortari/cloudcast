@@ -15,7 +15,7 @@ export default function Wind() {
 	const windDirection = Math.round(wind_direction_10m)
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 font-medium">
 				<WindIcon size={25} className="icon" /> Wind
 			</h4>
@@ -26,6 +26,6 @@ export default function Wind() {
 				<p className="text-sm font-medium">Wind Direction:</p>
 				<p className="text-lg">{windDirection}°</p>
 			</div>
-		</section>
+		</div>
 	)
 }

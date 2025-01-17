@@ -17,7 +17,7 @@ export default function Sunset() {
 	const sunriseTime = moment(sunrise[0]).tz(timezone).format("HH:mm")
 
 	return (
-		<section className="flex h-48 flex-col p-4">
+		<div className="card flex h-48 flex-col p-4">
 			<h4 className="flex items-center gap-2 font-medium">
 				<SunsetIcon size={25} className="icon" /> Sunset
 			</h4>
@@ -28,6 +28,6 @@ export default function Sunset() {
 				<p className="text-sm font-medium">Sunrise at:</p>
 				<p className="text-lg">{sunriseTime}</p>
 			</div>
-		</section>
+		</div>
 	)
 }
