@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog"
 export default function SearchDialog() {
 	const { geoCodedList, inputValue, handleInput } = useGlobalContext()
 	const { getClickedCityCoords } = useGlobalContextUpdate()
+	
 	const [hoveredIndex, setHoveredIndex] = useState<number>(0)
 	const [open, setOpen] = useState(false)
 

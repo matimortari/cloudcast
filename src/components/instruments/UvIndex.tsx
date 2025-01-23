@@ -1,4 +1,4 @@
-import { uvIndexRating } from "@/src/lib/weatherRatings"
+import { uvIndexRating } from "@/src/lib/weatherDescriptions"
 import { SunDim } from "lucide-react"
 import { useGlobalContext } from "../context/GlobalContext"
 import { Progress } from "../ui/progress"
@@ -14,7 +14,6 @@ export default function UvIndex() {
 	const { uv_index_max = [] } = forecast.daily
 
 	const uvIndex = Math.ceil(uv_index_max[0])
-
 	const { rating, description } = uvIndexRating(uvIndex)
 
 	return (

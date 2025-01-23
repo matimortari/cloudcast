@@ -8,6 +8,7 @@ import { Skeleton } from "../ui/skeleton"
 
 export default function Temperature() {
 	const { forecast, activeCityName } = useGlobalContext()
+
 	const [localTime, setLocalTime] = useState<string>("")
 	const [currentDate, setCurrentDate] = useState<string>("")
 
@@ -33,7 +34,6 @@ export default function Temperature() {
 	const temp = Math.round(temperature_2m)
 	const minTemp = Math.round(temperature_2m_min[0])
 	const maxTemp = Math.round(temperature_2m_max[0])
-
 	const weatherCode = weather_code
 	const WeatherIcon = getIcon(weatherCode)
 	const weatherDescription = getDescription(weatherCode)

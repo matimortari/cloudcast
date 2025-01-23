@@ -1,7 +1,7 @@
 import { CloudDrizzle, CloudFog, CloudLightning, CloudRain, CloudSun, Snowflake, SunIcon } from "lucide-react"
 
 // Return the appropriate description based on the weather code
-export const getDescription = (weatherCode: number): string => {
+export const getDescription = (weatherCode: number) => {
 	const weatherMap: { [key: number]: string } = {
 		0: "Clear sky",
 		1: "Mainly clear",
