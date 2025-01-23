@@ -1,4 +1,4 @@
-// Get UV index rating based on the UV index value
+// Get UV index rating and description based on the UV index value
 export const uvIndexRating = (uvIndex: number) => {
 	if (uvIndex <= 2)
 		return {
@@ -22,7 +22,7 @@ export const uvIndexRating = (uvIndex: number) => {
 		}
 }
 
-// Get air quality rating and description based on the AQI value
+// Get air quality description based on the Air Quality Index value
 export const airQualityRating = (aqIndex: number) => {
 	if (aqIndex <= 50) return "Air quality is good. Enjoy the fresh air!"
 	else if (aqIndex <= 100) return "Air quality is moderate. Enjoy the fresh air!"
@@ -32,14 +32,14 @@ export const airQualityRating = (aqIndex: number) => {
 	else return "Hazardous air quality. Stay indoors and avoid outdoor activities."
 }
 
-// Get feels like rating based on the apparent temperature
+// Get feels like description based on the apparent temperature
 export const feelsLikeRating = (feelsLike: number, currentTemp: number) => {
 	if (feelsLike < currentTemp - 2) return "Feels colder than the actual temperature."
 	else if (feelsLike <= currentTemp + 2) return "Feels close to the actual temperature."
 	else return "Feels warmer than the actual temperature."
 }
 
-// Get precipitation rating based on the precipitation value
+// Get precipitation description based on the precipitation value
 export const precipitationRating = (precipitation: number) => {
 	if (precipitation < 0.1) return "No precipitation expected."
 	else if (precipitation < 1) return "Light precipitation expected."
@@ -47,7 +47,7 @@ export const precipitationRating = (precipitation: number) => {
 	else return "Heavy precipitation expected."
 }
 
-// Get humidity rating based on the humidity value
+// Get humidity description based on the humidity value
 export const humidityRating = (humidity: number) => {
 	if (humidity < 30) return "Low humidity: stay hydrated!"
 	else if (humidity < 50) return "Comfortable humidity."
@@ -55,7 +55,7 @@ export const humidityRating = (humidity: number) => {
 	else return "High humidity: stay cool!"
 }
 
-// Get visibility rating based on the visibility value
+// Get visibility description based on the visibility value
 export const visibilityRating = (visibility: number) => {
 	if (visibility > 10) return "Excellent: Clear and vast view."
 	else if (visibility > 5) return "Good: Easily navigable."

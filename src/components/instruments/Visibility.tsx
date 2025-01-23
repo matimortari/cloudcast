@@ -1,4 +1,4 @@
-import { visibilityRating } from "@/src/lib/weatherRatings"
+import { visibilityRating } from "@/src/lib/weatherDescriptions"
 import { Eye } from "lucide-react"
 import { useGlobalContext } from "../context/GlobalContext"
 import { Skeleton } from "../ui/skeleton"

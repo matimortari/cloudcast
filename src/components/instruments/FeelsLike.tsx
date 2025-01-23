@@ -1,4 +1,4 @@
-import { feelsLikeRating } from "@/src/lib/weatherRatings"
+import { feelsLikeRating } from "@/src/lib/weatherDescriptions"
 import { Thermometer } from "lucide-react"
 import { useGlobalContext } from "../context/GlobalContext"
 import { Skeleton } from "../ui/skeleton"
@@ -14,7 +14,6 @@ export default function FeelsLike() {
 
 	const feelsLike = Math.round(apparent_temperature)
 	const currentTemp = Math.round(temperature_2m)
-
 	const feelsLikeDescription = feelsLikeRating(feelsLike, currentTemp)
 
 	return (

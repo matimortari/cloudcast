@@ -1,4 +1,4 @@
-import { precipitationRating } from "@/src/lib/weatherRatings"
+import { precipitationRating } from "@/src/lib/weatherDescriptions"
 import { CloudRain } from "lucide-react"
 import { useGlobalContext } from "../context/GlobalContext"
 import { Skeleton } from "../ui/skeleton"

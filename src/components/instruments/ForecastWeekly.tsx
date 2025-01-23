@@ -21,7 +21,6 @@ export default function ForecastWeekly() {
 
 	const maxTemp = Math.max(...temperature_2m_max)
 	const minTemp = Math.min(...temperature_2m_min)
-
 	const tempRange = maxTemp - minTemp
 
 	return (

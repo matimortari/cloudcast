@@ -7,13 +7,15 @@ import { useMap } from "react-leaflet"
 import { useGlobalContext } from "../context/GlobalContext"
 import { Skeleton } from "../ui/skeleton"
 
+// Disable server-side rendering for MapContainer
 const MapContainer = dynamic(() => import("react-leaflet").then((module) => module.MapContainer), {
 	ssr: false
-}) // Disable server-side rendering for MapContainer
+})
 
+// Disable server-side rendering for TileLayer
 const TileLayer = dynamic(() => import("react-leaflet").then((module) => module.TileLayer), {
 	ssr: false
-}) // Disable server-side rendering for TileLayer
+})
 
 function FlyToActiveCity({ activeCityCoords }) {
 	const map = useMap()
@@ -34,6 +36,7 @@ function FlyToActiveCity({ activeCityCoords }) {
 
 export default function Mapbox() {
 	const { forecast } = useGlobalContext()
+
 	const [mapLoaded, setMapLoaded] = useState(false)
 
 	if (!forecast || !forecast.latitude || !forecast.longitude) {
@@ -42,10 +45,6 @@ export default function Mapbox() {
 
 	const activeCityCoords = { latitude: forecast.latitude, longitude: forecast.longitude }
 
-	const handleMapLoaded = () => {
-		setMapLoaded(true)
-	}
-
 	return (
 		<div className="card relative flex-1 basis-1/2">
 			{!mapLoaded && <Skeleton className="absolute left-0 top-0 size-full" />}
@@ -53,7 +52,7 @@ export default function Mapbox() {
 				zoom={10}
 				center={[activeCityCoords.latitude, activeCityCoords.longitude]}
 				style={{ height: "calc(100% - 2rem)", width: "calc(100% - 2rem)", margin: "1rem", borderRadius: "0.25rem" }}
-				whenReady={handleMapLoaded}
+				whenReady={() => setMapLoaded(true)}
 			>
 				<TileLayer
 					url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.STADIA_API_KEY}`}
