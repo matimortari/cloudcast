@@ -32,7 +32,7 @@ export default function ForecastWeekly() {
 			{dailyForecast.map((day: any, index: number) => (
 				<div key={index} className="flex flex-col justify-evenly border-b-2 p-2">
 					<p className="text-lg font-bold">{day.day}</p>
-					<p className="flex justify-between text-xs">
+					<p className="flex justify-between text-xs text-muted-foreground">
 						<span>(low)</span>
 						<span>(high)</span>
 					</p>
@@ -41,7 +41,9 @@ export default function ForecastWeekly() {
 						<p className="font-bold">{day.minTemp}°C</p>
 
 						<div className="relative flex flex-1 items-center">
-							<p className="absolute -top-6 w-full text-center text-xs">Precipitation: {day.precipitation} mm</p>
+							<p className="absolute -top-6 w-full text-center text-xs text-muted-foreground">
+								Precipitation: {day.precipitation} mm
+							</p>
 
 							<Progress
 								className="progress w-full"
