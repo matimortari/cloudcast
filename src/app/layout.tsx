@@ -4,10 +4,10 @@ import Footer from "@/src/components/Footer"
 import Navbar from "@/src/components/Navbar"
 import "@/src/styles/globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Lato } from "next/font/google"
 import { ReactNode } from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+const lato = Lato({ subsets: ["latin"], weight: "700" })
 
 export const metadata: Metadata = {
 	title: "CloudCast 🌤️",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={inter.className}>
+			<body className={lato.className}>
 				<Providers>
 					<GlobalContextProvider>
 						<Navbar />
