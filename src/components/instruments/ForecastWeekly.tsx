@@ -29,8 +29,8 @@ export default function ForecastWeekly() {
 				<CalendarDays size={25} className="icon" /> Weekly Forecast
 			</h4>
 
-			{dailyForecast.map((day: any, index: number) => (
-				<div key={index} className="flex flex-col justify-evenly border-b-2 p-2">
+			{dailyForecast.map((day: any) => (
+				<div key={day} className="flex flex-col justify-evenly border-b-2 p-2">
 					<p className="text-lg font-bold">{day.day}</p>
 					<p className="flex justify-between text-xs text-muted-foreground">
 						<span>(low)</span>

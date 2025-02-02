@@ -47,17 +47,17 @@ export default function Home() {
 					<div className="my-2 flex w-full gap-2">
 						<Mapbox />
 						<div className="flex flex-col gap-2">
-							{defaultLocations.map((location, index) => {
+							{defaultLocations.map((location) => {
 								return (
-									<div
-										key={index}
+									<button
+										key={location.name}
 										onClick={() => {
 											getClickedCityCoords(location.latitude, location.longitude, location.name)
 										}}
-										className="card flex cursor-pointer flex-col gap-2"
+										className="card flex flex-col items-center gap-2"
 									>
 										<p className="p-4 text-center text-sm font-semibold hover:underline">{location.name}</p>
-									</div>
+									</button>
 								)
 							})}
 						</div>
