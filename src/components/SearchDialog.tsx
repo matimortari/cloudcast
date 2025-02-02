@@ -25,8 +25,8 @@ export default function SearchDialog() {
 				</Button>
 			</DialogTrigger>
 
-			<DialogContent className="scrollbar-hidden m-4 max-h-[90vh] rounded-2xl">
-				<DialogTitle className="text-base text-muted-foreground">Search Locations</DialogTitle>
+			<DialogContent className="scrollbar-hidden m-4 max-h-[90vh] overflow-hidden rounded-2xl">
+				<DialogTitle className="font-bold text-muted-foreground">Search Locations</DialogTitle>
 				<Command className="flex flex-grow flex-col">
 					<CommandInput
 						value={inputValue}
@@ -34,25 +34,28 @@ export default function SearchDialog() {
 						placeholder="Search for a city or location..."
 					/>
 
-					<div className="mt-2 flex flex-grow flex-col overflow-y-auto">
+					<div className="mt-2 flex max-h-[50vh] flex-grow flex-col overflow-y-auto">
 						<ul>
 							{geoCodedList?.length === 0 && (
-								<p className="p-2 text-base text-muted-foreground">No Results Avaliable :(</p>
+								<p className="p-2 text-base text-muted-foreground">No Results Available :(</p>
 							)}
 
 							{geoCodedList?.map((item: any, index: number) => {
 								const { country, admin1, name, latitude, longitude } = item
 								return (
-									<li
-										key={index}
-										onMouseEnter={() => setHoveredIndex(index)}
-										onClick={() => {
-											getClickedCityCoords(latitude, longitude, name)
-											setOpen(false)
-										}}
-										className={`cursor-pointer rounded-2xl p-4 text-sm ${hoveredIndex === index ? "bg-muted" : ""}`}
-									>
-										{name}, {admin1 ? `${admin1},` : ""} {country}
+									<li key={`${name}-${latitude}-${longitude}`} className="list-none">
+										<button
+											onMouseEnter={() => setHoveredIndex(index)}
+											onClick={() => {
+												getClickedCityCoords(latitude, longitude, name)
+												setOpen(false)
+											}}
+											className={`w-full rounded-2xl p-4 text-left text-sm transition-all ${
+												hoveredIndex === index ? "bg-muted" : ""
+											}`}
+										>
+											{name}, {admin1 ? `${admin1},` : ""} {country}
+										</button>
 									</li>
 								)
 							})}

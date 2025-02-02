@@ -30,7 +30,7 @@ export default function ForecastDaily() {
 						<h2 className="font-semibold text-muted-foreground">No data available</h2>
 					) : (
 						time.map((timePoint: number, index: number) => (
-							<CarouselItem key={index} className="flex basis-32 flex-col items-center justify-center gap-2">
+							<CarouselItem key={timePoint} className="flex basis-32 flex-col items-center justify-center gap-2">
 								<p className="text-xs">
 									{new Date(timePoint).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
 								</p>

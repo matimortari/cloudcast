@@ -4,10 +4,10 @@ import { defaultLocations } from "@/src/lib/utils"
 import { debounce } from "lodash"
 import { createContext, ReactNode, useContext, useEffect, useState } from "react"
 
-const GlobalContext = createContext<GlobalContextType | undefined>(undefined)
-const GlobalContextUpdate = createContext<GlobalContextUpdateType | undefined>(undefined)
+const GlobalContext = createContext<Readonly<GlobalContextType> | undefined>(undefined)
+const GlobalContextUpdate = createContext<Readonly<GlobalContextUpdateType> | undefined>(undefined)
 
-export function GlobalContextProvider({ children }: { children: ReactNode }) {
+export function GlobalContextProvider({ children }: Readonly<{ children: ReactNode }>) {
 	const [activeCityCoords, setActiveCityCoords] = useState<[number, number]>([40.7128, -74.006])
 	const [activeCityName, setActiveCityName] = useState("New York")
 	const [inputValue, setInputValue] = useState("")
@@ -102,7 +102,7 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
 
 	return (
 		<GlobalContext.Provider
-			value={{
+			value={Object.freeze({
 				forecast,
 				weeklyForecast,
 				geoCodedList,
@@ -111,14 +111,14 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
 				setActiveCityCoords,
 				airQuality,
 				activeCityName
-			}}
+			})}
 		>
 			<GlobalContextUpdate.Provider
-				value={{
+				value={Object.freeze({
 					setActiveCityCoords,
 					updateCityName,
 					getClickedCityCoords
-				}}
+				})}
 			>
 				{children}
 			</GlobalContextUpdate.Provider>
@@ -126,7 +126,7 @@ export function GlobalContextProvider({ children }: { children: ReactNode }) {
 	)
 }
 
-export const useGlobalContext = (): GlobalContextType => {
+export const useGlobalContext = (): Readonly<GlobalContextType> => {
 	const context = useContext(GlobalContext)
 	if (!context) {
 		throw new Error("useGlobalContext must be used within a GlobalContextProvider")
@@ -135,7 +135,7 @@ export const useGlobalContext = (): GlobalContextType => {
 	return context
 }
 
-export const useGlobalContextUpdate = (): GlobalContextUpdateType => {
+export const useGlobalContextUpdate = (): Readonly<GlobalContextUpdateType> => {
 	const context = useContext(GlobalContextUpdate)
 	if (!context) {
 		throw new Error("useGlobalContextUpdate must be used within a GlobalContextUpdateProvider")

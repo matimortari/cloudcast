@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 	}
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={lato.className}>

@@ -1,12 +1,12 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-// Use a helper to make it easier to conditionally add Tailwind CSS classes
+// Helper function to make it easier to conditionally add Tailwind CSS classes
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
 
-// Define the default locations array for the Mapbox component
+// Default locations array for the Mapbox component
 export const defaultLocations = [
 	{
 		name: "New York",

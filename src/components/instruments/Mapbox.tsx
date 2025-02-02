@@ -21,7 +21,7 @@ function FlyToActiveCity({ activeCityCoords }) {
 	const map = useMap()
 
 	useEffect(() => {
-		if (activeCityCoords && !isNaN(activeCityCoords.latitude) && !isNaN(activeCityCoords.longitude)) {
+		if (activeCityCoords?.latitude && activeCityCoords?.longitude) {
 			const zoomLev = 13
 			const flyToOptions = {
 				duration: 1.5
@@ -39,11 +39,11 @@ export default function Mapbox() {
 
 	const [mapLoaded, setMapLoaded] = useState(false)
 
-	if (!forecast || !forecast.latitude || !forecast.longitude) {
+	if (!forecast?.latitude || !forecast?.longitude) {
 		return <Skeleton className="size-full" />
 	}
 
-	const activeCityCoords = { latitude: forecast.latitude, longitude: forecast.longitude }
+	const activeCityCoords = { latitude: forecast?.latitude, longitude: forecast?.longitude }
 
 	return (
 		<div className="card relative flex-1 basis-1/2">
