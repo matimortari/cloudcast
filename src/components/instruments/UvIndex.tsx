@@ -18,16 +18,19 @@ export default function UvIndex() {
 
 	return (
 		<div className="card col-span-full flex h-48 flex-col p-4 md:col-span-1">
-			<h4 className="flex items-center gap-2 font-medium">
-				<SunDim size={25} className="icon" /> UV Index
-			</h4>
+			<header className="flex items-center gap-2 font-medium">
+				<SunDim size={25} className="icon text-muted-foreground" />
+				<h4>UV Index</h4>
+			</header>
 
 			<div className="my-4 flex flex-col gap-2">
-				<p className="text-2xl">
-					{uvIndex} <span className="text-base">({rating})</span>
-				</p>
+				<span className="text-2xl font-medium">
+					{uvIndex} <span className="text-sm">({rating})</span>
+				</span>
+
 				<Progress className="progress" value={Math.min(uvIndex, 10) * 10} max={100} />
-				<p className="text-sm">{description}</p>
+
+				<span className="text-sm">{description}</span>
 			</div>
 		</div>
 	)

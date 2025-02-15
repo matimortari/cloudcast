@@ -16,23 +16,25 @@ export default function Precipitation() {
 
 	return (
 		<div className="card flex h-48 flex-col p-4">
-			<h4 className="flex items-center gap-2 text-lg font-medium">
-				<CloudRain size={25} className="icon" /> Precipitation
-			</h4>
+			<header className="flex items-center gap-2 text-lg font-medium">
+				<CloudRain size={25} className="icon text-muted-foreground" />
+				<h4>Precipitation</h4>
+			</header>
 
 			<div className="my-4 flex flex-col gap-2">
-				<p className="text-xl font-medium">{precipitation} mm</p>
-				<p className="text-sm">{precipitationDescription}</p>
+				<span className="text-xl font-medium">{precipitation} mm</span>
+
+				<span className="text-sm">{precipitationDescription}</span>
 
 				<div className="flex flex-col">
 					<div className="flex flex-row">
-						<p className="text-sm font-medium">Rain:</p>
-						<p className="ml-1 text-sm font-normal">{rain} mm</p>
+						<span className="text-sm font-medium">Rain:</span>
+						<span className="ml-1 text-sm">{rain} mm</span>
 					</div>
 
 					<div className="flex flex-row">
-						<p className="text-sm font-medium">Snowfall:</p>
-						<p className="ml-1 text-sm font-normal">{snowfall} mm</p>
+						<span className="text-sm font-medium">Snowfall:</span>
+						<span className="ml-1 text-sm">{snowfall} mm</span>
 					</div>
 				</div>
 			</div>

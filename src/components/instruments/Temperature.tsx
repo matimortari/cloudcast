@@ -40,23 +40,27 @@ export default function Temperature() {
 
 	return (
 		<div className="card flex flex-col justify-between p-4">
-			<p className="flex items-center justify-between">
-				<span className="text-sm font-medium">{currentDate}</span>
+			<header className="flex items-start justify-between">
+				<div className="flex flex-col font-bold">
+					<span className="text-sm font-medium">{currentDate}</span>
+					<span>{activeCityName}</span>
+				</div>
+
 				<span className="text-sm font-medium">{localTime}</span>
-			</p>
+			</header>
 
-			<p className="flex gap-2 font-bold">
-				<span>{activeCityName}</span>
-			</p>
+			<span className="self-center p-4 text-9xl font-bold">{temp}°</span>
 
-			<p className="self-center p-4 text-9xl font-bold">{temp}°</p>
+			<WeatherIcon size={30} className="icon text-muted-foreground" />
 
-			<WeatherIcon size={30} className="icon" />
-			<p className="py-2 text-lg font-semibold">{weatherDescription}</p>
-			<p className="flex items-center gap-2">
-				<span>Low: {minTemp}°</span>
-				<span>High: {maxTemp}°</span>
-			</p>
+			<footer className="flex flex-col">
+				<span className="py-2 text-lg font-semibold">{weatherDescription}</span>
+
+				<div className="flex items-center gap-2">
+					<span>Low: {minTemp}°</span>
+					<span>High: {maxTemp}°</span>
+				</div>
+			</footer>
 		</div>
 	)
 }

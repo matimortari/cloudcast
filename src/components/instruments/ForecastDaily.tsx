@@ -20,30 +20,34 @@ export default function ForecastDaily() {
 
 	return (
 		<div className="card col-span-full flex h-48 flex-col gap-4 p-4 md:col-span-3">
-			<h4 className="flex items-center gap-2 font-medium">
-				<ClockIcon size={25} className="icon" /> Daily Forecast
-			</h4>
+			<header className="flex items-center gap-2 font-medium">
+				<ClockIcon size={25} className="icon text-muted-foreground" />
+				<h4>Daily Forecast</h4>
+			</header>
 
-			<Carousel className="relative w-full overflow-x-auto">
+			<Carousel className="relative flex w-full">
 				<CarouselContent className="flex flex-row gap-2">
 					{time.length === 0 ? (
 						<h2 className="font-semibold text-muted-foreground">No data available</h2>
 					) : (
 						time.map((timePoint: number, index: number) => (
-							<CarouselItem key={timePoint} className="flex basis-32 flex-col items-center justify-center gap-2">
+							<CarouselItem
+								key={timePoint}
+								className="flex basis-28 flex-col items-center justify-center gap-2 first:ml-6 last:mr-6"
+							>
 								<p className="text-xs">
 									{new Date(timePoint).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
 								</p>
-								<WeatherIcon size={25} aria-hidden="true" />
-								<p className="font-semibold">{temperature_2m[index]}°C</p>
-								<p className="text-xs text-muted-foreground">{precipitation[index]} mm</p>
+								<WeatherIcon size={25} className="text-muted-foreground" />
+								<span className="font-semibold">{temperature_2m[index]}°C</span>
+								<span className="text-xs text-muted-foreground">{precipitation[index]} mm</span>
 							</CarouselItem>
 						))
 					)}
 				</CarouselContent>
 
-				<CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-y-1/2 bg-card" variant={"ghost"} />
-				<CarouselNext className="absolute right-0 top-1/2 z-10 -translate-y-1/2 bg-card" variant={"ghost"} />
+				<CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-y-1/2 border bg-card" variant={"ghost"} />
+				<CarouselNext className="absolute right-0 top-1/2 z-10 -translate-y-1/2 border bg-card" variant={"ghost"} />
 			</Carousel>
 		</div>
 	)

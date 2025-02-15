@@ -53,6 +53,7 @@ export default function Mapbox() {
 				center={[activeCityCoords.latitude, activeCityCoords.longitude]}
 				style={{ height: "calc(100% - 2rem)", width: "calc(100% - 2rem)", margin: "1rem", borderRadius: "0.25rem" }}
 				whenReady={() => setMapLoaded(true)}
+				attributionControl={false}
 			>
 				<TileLayer
 					url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.STADIA_API_KEY}`}

@@ -18,13 +18,14 @@ export default function FeelsLike() {
 
 	return (
 		<div className="card flex h-48 flex-col p-4">
-			<h4 className="flex items-center gap-2 font-medium">
-				<Thermometer size={25} className="icon" /> Feels Like
-			</h4>
+			<header className="flex items-center gap-2 font-medium">
+				<Thermometer size={25} className="icon text-muted-foreground" />
+				<h4>Feels Like</h4>
+			</header>
 
 			<div className="my-4 flex flex-col gap-4">
-				<p className="text-2xl font-medium">{feelsLike}°</p>
-				<p className="w-36 text-sm">{feelsLikeDescription}</p>
+				<span className="text-2xl font-medium">{feelsLike}°</span>
+				<span className="w-36 text-sm">{feelsLikeDescription}</span>
 			</div>
 		</div>
 	)
