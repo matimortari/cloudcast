@@ -16,15 +16,16 @@ export default function Wind() {
 
 	return (
 		<div className="card flex h-48 flex-col p-4">
-			<h4 className="flex items-center gap-2 font-medium">
-				<WindIcon size={25} className="icon" /> Wind
-			</h4>
+			<header className="flex items-center gap-2 font-medium">
+				<WindIcon size={25} className="icon text-muted-foreground" />
+				<h4>Wind</h4>
+			</header>
 
 			<div className="my-4 flex flex-col gap-1">
-				<p className="text-sm font-medium">Wind Speed:</p>
-				<p className="text-lg">{windSpeed} km/h</p>
-				<p className="text-sm font-medium">Wind Direction:</p>
-				<p className="text-lg">{windDirection}°</p>
+				<span className="text-sm font-medium">Wind Speed:</span>
+				<span className="text-lg">{windSpeed} km/h</span>
+				<span className="text-sm font-medium">Wind Direction:</span>
+				<span className="text-lg">{windDirection}°</span>
 			</div>
 		</div>
 	)

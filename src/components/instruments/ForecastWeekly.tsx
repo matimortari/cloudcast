@@ -25,25 +25,26 @@ export default function ForecastWeekly() {
 
 	return (
 		<div className="card flex flex-1 flex-col justify-between p-4">
-			<h4 className="flex items-center gap-2 py-2 font-medium">
-				<CalendarDays size={25} className="icon" /> Weekly Forecast
-			</h4>
+			<header className="flex items-center gap-2 py-2 font-medium">
+				<CalendarDays size={25} className="icon text-muted-foreground" />
+				<h4>Weekly Forecast</h4>
+			</header>
 
 			{dailyForecast.map((day: any) => (
-				<div key={day} className="flex flex-col justify-evenly border-b-2 p-2">
-					<p className="text-lg font-bold">{day.day}</p>
-					<p className="flex justify-between text-xs text-muted-foreground">
+				<div key={day.day} className="flex flex-col justify-evenly border-b-2 p-2 last:border-b-0">
+					<span className="text-lg font-bold">{day.day}</span>
+					<div className="flex justify-between text-xs text-muted-foreground">
 						<span>(low)</span>
 						<span>(high)</span>
-					</p>
+					</div>
 
 					<div className="flex flex-1 items-center justify-between gap-2">
-						<p className="font-bold">{day.minTemp}°C</p>
+						<span className="font-bold">{day.minTemp}°C</span>
 
 						<div className="relative flex flex-1 items-center">
-							<p className="absolute -top-6 w-full text-center text-xs text-muted-foreground">
+							<span className="absolute -top-6 w-full text-center text-xs text-muted-foreground">
 								Precipitation: {day.precipitation} mm
-							</p>
+							</span>
 
 							<Progress
 								className="progress w-full"
@@ -51,7 +52,7 @@ export default function ForecastWeekly() {
 							/>
 						</div>
 
-						<p className="font-bold">{day.maxTemp}°C</p>
+						<span className="font-bold">{day.maxTemp}°C</span>
 					</div>
 				</div>
 			))}

@@ -19,22 +19,25 @@ export default function Humidity() {
 
 	return (
 		<div className="card flex h-48 flex-col p-4">
-			<h4 className="flex items-center gap-2 text-lg font-medium">
-				<Droplets size={25} className="icon" /> Humidity
-			</h4>
+			<header className="flex items-center gap-2 text-lg font-medium">
+				<Droplets size={25} className="icon text-muted-foreground" />
+				<h4>Humidity</h4>
+			</header>
 
 			<div className="my-4 flex flex-col gap-2">
-				<p className="text-xl font-medium">{relative_humidity_2m}%</p>
-				<p className="text-sm">{humidityDescription}</p>
+				<span className="text-xl font-medium">{relative_humidity_2m}%</span>
+
+				<span className="text-sm">{humidityDescription}</span>
 
 				<div className="flex flex-col">
 					<div className="flex flex-row">
 						<span className="text-sm font-medium">Dew Point:</span>
-						<span className="ml-1 text-sm font-normal">{dewPoint}°</span>
+						<span className="ml-1 text-sm">{dewPoint}°</span>
 					</div>
+
 					<div className="flex flex-row">
 						<span className="text-sm font-medium">Pressure:</span>
-						<span className="ml-1 text-sm font-normal">{pressure} hPa</span>
+						<span className="ml-1 text-sm">{pressure} hPa</span>
 					</div>
 				</div>
 			</div>

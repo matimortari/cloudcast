@@ -18,40 +18,41 @@ export default function AirQuality() {
 	return (
 		<div className="card col-span-2 flex h-auto w-full flex-col p-4 md:h-48 md:flex-row md:gap-10">
 			<div className="flex flex-1 flex-col">
-				<h4 className="flex items-center gap-2 font-medium">
-					<Gauge size={25} className="icon" /> Air Quality
-				</h4>
+				<header className="flex items-center gap-2 font-medium">
+					<Gauge size={25} className="icon text-muted-foreground" />
+					<h4>Air Quality</h4>
+				</header>
 
 				<div className="my-4 flex flex-col gap-2">
-					<p className="text-sm">Air Quality Index: {us_aqi}</p>
-					<Progress className="progress" value={us_aqi} max={300} />
-					<p className="text-sm">{airQualityDescription}</p>
+					<span className="text-sm">Air Quality Index: {us_aqi}</span>
+					<Progress value={us_aqi} max={300} className="progress" />
+					<span className="text-sm">{airQualityDescription}</span>
 				</div>
 			</div>
 
 			<div className="flex flex-1 flex-row gap-1">
 				<div className="flex flex-1 flex-col gap-1 text-sm font-semibold">
-					<p>
-						PM10: <span className="font-normal">{pm10 ?? "N/A"} μg/m³</span>
-					</p>
-					<p>
-						PM2.5: <span className="font-normal">{pm2_5 ?? "N/A"} μg/m³</span>
-					</p>
-					<p>
-						Carbon Monoxide: <span className="font-normal">{carbon_monoxide ?? "N/A"} μg/m³</span>
-					</p>
+					<span>
+						PM10: <span>{pm10 ?? "N/A"} μg/m³</span>
+					</span>
+					<span>
+						PM2.5: <span>{pm2_5 ?? "N/A"} μg/m³</span>
+					</span>
+					<span>
+						Carbon Monoxide: <span>{carbon_monoxide ?? "N/A"} μg/m³</span>
+					</span>
 				</div>
 
 				<div className="flex flex-1 flex-col gap-1 text-sm font-semibold">
-					<p>
-						Nitrogen Dioxide: <span className="font-normal">{nitrogen_dioxide ?? "N/A"} μg/m³</span>
-					</p>
-					<p>
-						Sulphur Dioxide: <span className="font-normal">{sulphur_dioxide ?? "N/A"} μg/m³</span>
-					</p>
-					<p>
-						Ozone: <span className="font-normal">{ozone ?? "N/A"} μg/m³</span>
-					</p>
+					<span>
+						Nitrogen Dioxide: <span>{nitrogen_dioxide ?? "N/A"} μg/m³</span>
+					</span>
+					<span>
+						Sulphur Dioxide: <span>{sulphur_dioxide ?? "N/A"} μg/m³</span>
+					</span>
+					<span>
+						Ozone: <span>{ozone ?? "N/A"} μg/m³</span>
+					</span>
 				</div>
 			</div>
 		</div>
