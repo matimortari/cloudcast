@@ -44,7 +44,7 @@ export default function Navbar() {
 					title={themeTitle}
 					className="flex items-center justify-center bg-card hover:bg-muted"
 				>
-					{themeIcon && <Icon icon={themeIcon} className="size-4 text-foreground" />}
+					{themeIcon && <Icon icon={themeIcon} width={20} height={20} className="text-muted-foreground" />}
 				</Button>
 			</div>
 		</nav>
