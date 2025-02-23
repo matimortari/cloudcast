@@ -39,15 +39,15 @@ export default function ForecastDaily() {
 									{new Date(timePoint).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
 								</p>
 								<WeatherIcon size={25} className="text-muted-foreground" />
-								<span className="font-semibold">{temperature_2m[index]}°C</span>
+								<span className="font-bold">{temperature_2m[index]}°C</span>
 								<span className="text-xs text-muted-foreground">{precipitation[index]} mm</span>
 							</CarouselItem>
 						))
 					)}
 				</CarouselContent>
 
-				<CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-y-1/2 border bg-card" variant={"ghost"} />
-				<CarouselNext className="absolute right-0 top-1/2 z-10 -translate-y-1/2 border bg-card" variant={"ghost"} />
+				<CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-y-1/2 bg-muted" variant={"ghost"} />
+				<CarouselNext className="absolute right-0 top-1/2 z-10 -translate-y-1/2 bg-muted" variant={"ghost"} />
 			</Carousel>
 		</div>
 	)
