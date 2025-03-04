@@ -16,10 +16,10 @@ This project is based on a tutorial from [FreeCodeCamp](https://www.youtube.com/
 
 ## 🛠️ Stack
 
-- **Next.js** for routing & server-side rendering.
-- **Open Meteo** API for weather data.
+- **Next.js** with app router.
+- **Open Meteo** API integration for weather data.
 - **Leaflet** for interactive maps.
-- **shadcn/ui** for UI components.
+- **ShadCN/UI** for UI components.
 - **TypeScript**.
 - **Tailwind CSS**.
 
