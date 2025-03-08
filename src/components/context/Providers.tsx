@@ -1,9 +1,9 @@
 "use client"
 
-/* Wrapper component for the main providers used in the application
-- QueryClientProvider: Sets up React Query for data fetching and caching
+/* Wrapper component for the application's context providers
+- QueryClientProvider: Sets up the React Query client 
 - ReactQueryDevtools: Enables React Query debugging tools in development
-- ThemeProvider: Adds support for light/dark theme selection using next-themes
+- ThemeProvider: Allow theme selection using next-themes
 - Analytics: Provides Vercel analytics for tracking user interactions */
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
