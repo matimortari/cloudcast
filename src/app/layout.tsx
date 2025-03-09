@@ -10,6 +10,7 @@ import { ReactNode } from "react"
 const lato = Lato({ subsets: ["latin"], weight: "700" })
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://cloudcast-live.vercel.app"),
 	title: "CloudCast 🌤️",
 	description: "Weather App!",
 	keywords: ["CloudCast", "Weather", "Weather App", "CloudCast Page"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 		title: "CloudCast 🌤️",
 		description: "Weather App!",
 		type: "website",
-		images: "/opengraph-image.png"
+		images: "/og-image.png"
 	},
 	other: {
 		"google-site-verification": "2j0bcfhh8FCYPpzFylzbiPjl3Pa0X7lMuG060ctsCsA"
