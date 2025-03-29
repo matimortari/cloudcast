@@ -1,12 +1,12 @@
 "use client"
 
+import SearchDialog from "@/src/components/SearchDialog"
+import { Button } from "@/src/components/ui/button"
 import { Icon } from "@iconify/react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import SearchDialog from "./SearchDialog"
-import { Button } from "./ui/button"
 
 export default function Navbar() {
 	const { theme, setTheme } = useTheme()

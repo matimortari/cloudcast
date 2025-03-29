@@ -1,7 +1,7 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { visibilityRating } from "@/src/lib/weatherDescriptions"
 import { Eye } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 export default function Visibility() {
 	const { forecast } = useGlobalContext()

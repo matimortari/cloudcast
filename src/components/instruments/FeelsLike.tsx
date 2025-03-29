@@ -1,7 +1,7 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { feelsLikeRating } from "@/src/lib/weatherDescriptions"
 import { Thermometer } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 export default function FeelsLike() {
 	const { forecast } = useGlobalContext()

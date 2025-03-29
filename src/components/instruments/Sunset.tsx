@@ -1,7 +1,7 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { SunsetIcon } from "lucide-react"
 import moment from "moment-timezone"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 export default function Sunset() {
 	const { forecast } = useGlobalContext()

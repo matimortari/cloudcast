@@ -1,7 +1,7 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Progress } from "@/src/components/ui/progress"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { CalendarDays } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Progress } from "../ui/progress"
-import { Skeleton } from "../ui/skeleton"
 
 export default function ForecastWeekly() {
 	const { weeklyForecast } = useGlobalContext()

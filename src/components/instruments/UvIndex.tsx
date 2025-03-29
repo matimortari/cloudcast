@@ -1,8 +1,8 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Progress } from "@/src/components/ui/progress"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { uvIndexRating } from "@/src/lib/weatherDescriptions"
 import { SunDim } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Progress } from "../ui/progress"
-import { Skeleton } from "../ui/skeleton"
 
 export default function UvIndex() {
 	const { forecast } = useGlobalContext()

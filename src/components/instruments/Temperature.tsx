@@ -1,10 +1,10 @@
 "use client"
 
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { getDescription, getIcon } from "@/src/lib/weatherMappings"
 import moment from "moment-timezone"
 import { useEffect, useState } from "react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 export default function Temperature() {
 	const { forecast, activeCityName } = useGlobalContext()
