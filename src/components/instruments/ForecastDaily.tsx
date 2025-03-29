@@ -1,10 +1,10 @@
 "use client"
 
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/src/components/ui/carousel"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { getIcon } from "@/src/lib/weatherMappings"
 import { ClockIcon } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel"
-import { Skeleton } from "../ui/skeleton"
 
 export default function ForecastDaily() {
 	const { forecast } = useGlobalContext()

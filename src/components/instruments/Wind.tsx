@@ -1,6 +1,6 @@
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import { WindIcon } from "lucide-react"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 export default function Wind() {
 	const { forecast } = useGlobalContext()

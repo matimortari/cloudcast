@@ -1,11 +1,11 @@
 "use client"
 
+import { useGlobalContext, useGlobalContextUpdate } from "@/src/components/context/GlobalContext"
+import { Button } from "@/src/components/ui/button"
+import { Command, CommandInput } from "@/src/components/ui/command"
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog"
 import { SearchIcon } from "lucide-react"
 import { useState } from "react"
-import { useGlobalContext, useGlobalContextUpdate } from "./context/GlobalContext"
-import { Button } from "./ui/button"
-import { Command, CommandInput } from "./ui/command"
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog"
 
 export default function SearchDialog() {
 	const { geoCodedList, inputValue, handleInput } = useGlobalContext()

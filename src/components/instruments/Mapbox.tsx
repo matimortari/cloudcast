@@ -1,11 +1,11 @@
 "use client"
 
+import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { Skeleton } from "@/src/components/ui/skeleton"
 import "leaflet/dist/leaflet.css"
 import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
 import { useMap } from "react-leaflet"
-import { useGlobalContext } from "../context/GlobalContext"
-import { Skeleton } from "../ui/skeleton"
 
 // Disable server-side rendering for MapContainer
 const MapContainer = dynamic(() => import("react-leaflet").then((module) => module.MapContainer), {
