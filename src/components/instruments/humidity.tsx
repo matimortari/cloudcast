@@ -1,6 +1,6 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
-import { humidityRating } from "@/src/lib/weatherDescriptions"
+import { HUMIDITY_RATING } from "@/src/config/weather-config"
 import { Droplets } from "lucide-react"
 
 export default function Humidity() {
@@ -15,7 +15,7 @@ export default function Humidity() {
 	const pressure = Math.round(surface_pressure)
 	const dewPoint = Math.round(dew_point_2m)
 
-	const humidityDescription = humidityRating(relative_humidity_2m)
+	const humidityDescription = HUMIDITY_RATING(relative_humidity_2m)
 
 	return (
 		<div className="card flex h-48 flex-col p-4">

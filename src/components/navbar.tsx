@@ -1,6 +1,6 @@
 "use client"
 
-import SearchDialog from "@/src/components/SearchDialog"
+import SearchDialog from "@/src/components/search-dialog"
 import { Button } from "@/src/components/ui/button"
 import { Icon } from "@iconify/react"
 import { useTheme } from "next-themes"

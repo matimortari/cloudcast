@@ -1,4 +1,4 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
 import { WindIcon } from "lucide-react"
 

@@ -1,19 +1,19 @@
 "use client"
 
-import { useGlobalContextUpdate } from "@/src/components/context/GlobalContext"
-import AirQuality from "@/src/components/instruments/AirQuality"
-import FeelsLike from "@/src/components/instruments/FeelsLike"
-import ForecastDaily from "@/src/components/instruments/ForecastDaily"
-import ForecastWeekly from "@/src/components/instruments/ForecastWeekly"
-import Humidity from "@/src/components/instruments/Humidity"
-import Mapbox from "@/src/components/instruments/Mapbox"
-import Precipitation from "@/src/components/instruments/Precipitation"
-import Sunset from "@/src/components/instruments/Sunset"
-import Temperature from "@/src/components/instruments/Temperature"
-import UvIndex from "@/src/components/instruments/UvIndex"
-import Visibility from "@/src/components/instruments/Visibility"
-import Wind from "@/src/components/instruments/Wind"
-import { defaultLocations } from "@/src/lib/utils"
+import { useGlobalContextUpdate } from "@/src/components/context/global-context"
+import AirQuality from "@/src/components/instruments/air-quality"
+import FeelsLike from "@/src/components/instruments/feels-like"
+import ForecastDaily from "@/src/components/instruments/forecast-daily"
+import ForecastWeekly from "@/src/components/instruments/forecast-weekly"
+import Humidity from "@/src/components/instruments/humidity"
+import Mapbox from "@/src/components/instruments/mapbox"
+import Precipitation from "@/src/components/instruments/precipitation"
+import Sunset from "@/src/components/instruments/sunset"
+import Temperature from "@/src/components/instruments/temperature"
+import UvIndex from "@/src/components/instruments/uv-index"
+import Visibility from "@/src/components/instruments/visibility"
+import Wind from "@/src/components/instruments/wind"
+import { DEFAULT_LOCATIONS } from "@/src/config/default-locations"
 
 export default function Home() {
 	const { setActiveCityCoords, updateCityName } = useGlobalContextUpdate()
@@ -47,7 +47,7 @@ export default function Home() {
 					<div className="my-2 flex w-full gap-2">
 						<Mapbox />
 						<div className="flex flex-col gap-2">
-							{defaultLocations.map((location) => {
+							{DEFAULT_LOCATIONS.map((location) => {
 								return (
 									<button
 										key={location.name}

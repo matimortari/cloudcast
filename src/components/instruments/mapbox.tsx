@@ -1,6 +1,6 @@
 "use client"
 
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
 import "leaflet/dist/leaflet.css"
 import dynamic from "next/dynamic"

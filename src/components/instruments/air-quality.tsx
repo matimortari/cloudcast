@@ -1,7 +1,7 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Progress } from "@/src/components/ui/progress"
 import { Skeleton } from "@/src/components/ui/skeleton"
-import { airQualityRating } from "@/src/lib/weatherDescriptions"
+import { AQ_RATING } from "@/src/config/weather-config"
 import { Gauge } from "lucide-react"
 
 export default function AirQuality() {
@@ -13,7 +13,7 @@ export default function AirQuality() {
 
 	const { us_aqi, pm10, pm2_5, carbon_monoxide, nitrogen_dioxide, sulphur_dioxide, ozone } = airQuality.current
 
-	const airQualityDescription = airQualityRating(us_aqi)
+	const airQualityDescription = AQ_RATING(us_aqi)
 
 	return (
 		<div className="card col-span-2 flex h-auto w-full flex-col p-4 md:h-48 md:flex-row md:gap-10">

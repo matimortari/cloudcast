@@ -1,6 +1,6 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
-import { feelsLikeRating } from "@/src/lib/weatherDescriptions"
+import { FEELS_LIKE_RATING } from "@/src/config/weather-config"
 import { Thermometer } from "lucide-react"
 
 export default function FeelsLike() {
@@ -14,7 +14,7 @@ export default function FeelsLike() {
 
 	const feelsLike = Math.round(apparent_temperature)
 	const currentTemp = Math.round(temperature_2m)
-	const feelsLikeDescription = feelsLikeRating(feelsLike, currentTemp)
+	const feelsLikeDescription = FEELS_LIKE_RATING(feelsLike, currentTemp)
 
 	return (
 		<div className="card flex h-48 flex-col p-4">

@@ -1,6 +1,6 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
-import { visibilityRating } from "@/src/lib/weatherDescriptions"
+import { VISIBILITY_RATING } from "@/src/config/weather-config"
 import { Eye } from "lucide-react"
 
 export default function Visibility() {
@@ -13,7 +13,7 @@ export default function Visibility() {
 	const { visibility = [] } = forecast.hourly
 
 	const visibilityInKm = Math.round(visibility[0] / 1000)
-	const visibilityDescription = visibilityRating(visibilityInKm)
+	const visibilityDescription = VISIBILITY_RATING(visibilityInKm)
 
 	return (
 		<div className="card flex h-48 flex-col p-4">

@@ -1,6 +1,6 @@
-import { useGlobalContext } from "@/src/components/context/GlobalContext"
+import { useGlobalContext } from "@/src/components/context/global-context"
 import { Skeleton } from "@/src/components/ui/skeleton"
-import { precipitationRating } from "@/src/lib/weatherDescriptions"
+import { PRECIPITATION_RATING } from "@/src/config/weather-config"
 import { CloudRain } from "lucide-react"
 
 export default function Precipitation() {
@@ -12,7 +12,7 @@ export default function Precipitation() {
 
 	const { precipitation, rain, snowfall } = forecast.current
 
-	const precipitationDescription = precipitationRating(precipitation)
+	const precipitationDescription = PRECIPITATION_RATING(precipitation)
 
 	return (
 		<div className="card flex h-48 flex-col p-4">

@@ -1,6 +1,6 @@
 "use client"
 
-import { defaultLocations } from "@/src/lib/utils"
+import { DEFAULT_LOCATIONS } from "@/src/config/default-locations"
 import { debounce } from "lodash"
 import { createContext, ReactNode, useContext, useEffect, useState } from "react"
 
@@ -11,7 +11,7 @@ export function GlobalContextProvider({ children }: Readonly<{ children: ReactNo
 	const [activeCityCoords, setActiveCityCoords] = useState<[number, number]>([40.7128, -74.006])
 	const [activeCityName, setActiveCityName] = useState("New York")
 	const [inputValue, setInputValue] = useState("")
-	const [geoCodedList, setGeoCodedList] = useState(defaultLocations)
+	const [geoCodedList, setGeoCodedList] = useState(DEFAULT_LOCATIONS)
 	const [forecast, setForecast] = useState<any>({})
 	const [weeklyForecast, setWeeklyForecast] = useState<any>({})
 	const [airQuality, setAirQuality] = useState<any>(null)
@@ -65,7 +65,7 @@ export function GlobalContextProvider({ children }: Readonly<{ children: ReactNo
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputValue(e.target.value)
 		if (e.target.value === "") {
-			setGeoCodedList(defaultLocations)
+			setGeoCodedList(DEFAULT_LOCATIONS)
 		}
 	}
 

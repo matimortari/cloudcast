@@ -1,6 +1,6 @@
 "use client"
 
-import { useGlobalContext, useGlobalContextUpdate } from "@/src/components/context/GlobalContext"
+import { useGlobalContext, useGlobalContextUpdate } from "@/src/components/context/global-context"
 import { Button } from "@/src/components/ui/button"
 import { Command, CommandInput } from "@/src/components/ui/command"
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog"
